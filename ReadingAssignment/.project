@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>ReadingAssignment</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+	</buildSpec>
+	<natures>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>ReadingAssignment.jpg</name>
+			<type>1</type>
+			<location>C:/Users/Admin/Downloads/ReadingAssignment.jpg</location>
+		</link>
+		<link>
+			<name>Report.pdf</name>
+			<type>1</type>
+			<location>C:/Users/Admin/Downloads/Report.pdf</location>
+		</link>
+		<link>
+			<name>answerlab2.txt</name>
+			<type>1</type>
+			<location>C:/Users/Admin/Downloads/answer.txt</location>
+		</link>
+	</linkedResources>
+</projectDescription>
