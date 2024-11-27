@@ -1,0 +1,2 @@
+1. khi chọn "cancel" thì sẽ tương đương với chon "NO"
+2. Thay vì dùng showConfirmDialog ta dùng showOptionDialog, code sửa lưu trong class "ChoosingOptionPlus"
