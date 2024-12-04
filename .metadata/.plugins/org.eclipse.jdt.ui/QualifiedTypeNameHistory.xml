@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="java.util.Random"/>
+    <fullyQualifiedTypeName name="java.lang.StringBuilder"/>
+    <fullyQualifiedTypeName name="hust.soict.dsai.aims.disc.DigitalVideoDisc"/>
+    <fullyQualifiedTypeName name="java.lang.classfile.Superclass"/>
+    <fullyQualifiedTypeName name="hust.soict.dsai.aims.media.Book"/>
+    <fullyQualifiedTypeName name="hust.soict.dsai.aims.media.Track"/>
+    <fullyQualifiedTypeName name="hust.soict.dsai.aims.Comparator"/>
+    <fullyQualifiedTypeName name="hust.soict.dsai.aims.media.Media"/>
+</qualifiedTypeNameHistroy>

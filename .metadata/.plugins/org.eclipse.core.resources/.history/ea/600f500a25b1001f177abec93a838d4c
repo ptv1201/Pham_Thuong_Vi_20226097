@@ -1,0 +1,25 @@
+package hust.soict.dsai.aims.media;
+
+import java.util.ArrayList;
+
+public class compactDisc extends Disc{
+	private String artist; 
+	private ArrayList<Track> tracks= new ArrayList<Track>(); 
+//các hàm khởi tạo
+	public compactDisc() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	public compactDisc(int id, String title, String category, float cost, String director, int length,String artist) {
+		super(id, title, category, cost, director, length);
+		// TODO Auto-generated constructor stub
+		this.artist=artist;
+	}
+	public compactDisc(String title, String director, int length,String artist) {
+		super(title, director, length);
+		// TODO Auto-generated constructor stub
+		this.artist=artist;
+	}
+	
+
+}

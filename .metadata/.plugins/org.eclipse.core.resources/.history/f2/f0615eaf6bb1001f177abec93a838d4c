@@ -1,0 +1,13 @@
+package hust.soict.dsai.aims.media;
+import java.util.Comparator;
+public class MediaComparatorByCostTitle implements Comparator<Media> {
+@Override
+public int compare (Media ol, Media o2) {
+if(ol.getCost() != o2.getCost()) {
+int i = (int) (ol.getCost() o2.getCost());
+return i;
+} else {
+return o1.getTitle().compareTo(o2.getTitle());
+}
+}
+}

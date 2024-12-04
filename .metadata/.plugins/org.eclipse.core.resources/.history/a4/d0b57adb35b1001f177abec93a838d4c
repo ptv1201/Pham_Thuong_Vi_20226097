@@ -1,0 +1,72 @@
+package hust.soict.dsai.aims.cart;
+
+import java.util.ArrayList;
+
+import hust.soict.dsai.aims.media.Media;
+
+public class Cart {
+
+	private ArrayList<Media> itemsOrdered = new ArrayList<Media>();
+	//addMedia
+	
+	public void addMedia(Media media) {
+	    itemsOrdered.add(media);
+	    System.out.println("Added: " + media.getTitle());
+	}
+//removeMedia
+	public void removeMedia(Media media) {
+	    if (itemsOrdered.remove(media)) {
+	        System.out.println("Removed: " + media.getTitle());
+	    } else {
+	        System.out.println("Media not found in the cart.");
+	    }
+	}
+
+
+	// Hàm tính tổng giá tiền đĩa
+	public float totalCost() {
+		float sum = 0.00f;
+		for (int i = 0; i < qtyOrdered; i++) {
+			sum += itemsOrdered[i].getCost();
+		}
+		return sum;
+	}
+
+	// hàm print
+	public void print() {
+		float totalCost = 0.00f;
+		StringBuilder output = new StringBuilder("***********************CART***********************\nOrderItems\n");
+		for (int i = 0; i < qtyOrdered; i++) {
+			output.append((i + 1) + " - " + itemsOrdered[i].getTitle() + " - " + itemsOrdered[i].getCategory() + " - "
+					+ itemsOrdered[i].getDirector() + " - " + itemsOrdered[i].getLength() + " : "
+					+ itemsOrdered[i].getCost() + " $\n");
+			totalCost = +itemsOrdered[i].getCost();
+		}
+		output.append("Total cost: " + totalCost + " $")
+				.append("\n***************************************************");
+		System.out.println(output);
+	}
+//hàm search ID
+	public void search(int id) {
+		if (id > qtyOrdered) {
+			System.out.println("No match found");
+		} else {
+			System.out.println("result: " + itemsOrdered[id - 1].getTitle() + " - " + itemsOrdered[id - 1].getCategory()
+					+ " - " + itemsOrdered[id - 1].getDirector() + " - " + itemsOrdered[id - 1].getLength() + " : "
+					+ itemsOrdered[id - 1].getCost() + " $\n");
+		}
+	}
+
+	// hàm search by title
+	public void search(String title) {
+		for (int i = 0; i < qtyOrdered; i++) {
+			if (itemsOrdered[i].getTitle().equals(title)) {
+				System.out.println("result: " + itemsOrdered[i].getTitle() + " - " + itemsOrdered[i].getCategory()
+						+ " - " + itemsOrdered[i].getDirector() + " - " + itemsOrdered[i].getLength() + " : "
+						+ itemsOrdered[i].getCost() + " $\n");
+				return;
+			}
+		}
+		System.out.println("No match found");
+	}
+}

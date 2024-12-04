@@ -1,0 +1,9 @@
+package hust.soict.dsai.aims.media;
+
+public class MediaComparatorByTitleId {
+
+	public MediaComparatorByTitleId() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

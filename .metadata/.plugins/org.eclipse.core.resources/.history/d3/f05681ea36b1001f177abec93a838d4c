@@ -1,0 +1,68 @@
+package hust.soict.dsai.aims.cart;
+
+import java.util.ArrayList;
+
+import hust.soict.dsai.aims.media.Media;
+
+public class Cart {
+
+	private ArrayList<Media> itemsOrdered = new ArrayList<Media>();
+	//addMedia
+	
+	public void addMedia(Media media) {
+	    itemsOrdered.add(media);
+	    System.out.println("Added: " + media.getTitle());
+	}
+//removeMedia
+	public void removeMedia(Media media) {
+	    if (itemsOrdered.remove(media)) {
+	        System.out.println("Removed: " + media.getTitle());
+	    } else {
+	        System.out.println("Media not found in the cart.");
+	    }
+	}
+
+
+	// Hàm tính tổng giá tiền đĩa
+	public float totalCost() {
+		float sum = 0.00f;
+		for (Media i: itemsOrdered) {
+			sum += i.getCost();
+		}
+		return sum;
+	}
+
+	// hàm print
+	public void print() {
+		float totalCost = 0.00f;
+		StringBuilder output = new StringBuilder("***********************CART***********************\nOrderItems\n");
+		for (Media i: itemsOrdered) {
+			output.append(i.getId() + " - " +i.getTitle() + " - " + i.getCategory() +" : "+ i.getCost() + " $\n");
+			totalCost = +i.getCost();
+		}
+		output.append("Total cost: " + totalCost + " $")
+				.append("\n***************************************************");
+		System.out.println(output);
+	}
+//hàm search ID
+	public void search(int id) {
+		for (Media i: itemsOrdered) {
+			if (i.getId()==id) {
+				System.out.println("result: " + i.getTitle() + " - " + i.getCategory()+ " : "+ i.getCost() + " $\n");
+				return;
+			}
+		}
+		System.out.println("No match found");
+	}
+
+	// hàm search by title
+	public void search(String title) {
+		for (Media i: itemsOrdered) {
+			if (i.getTitle().equals(title)) {
+				System.out.println("result: " + i.getTitle() + " - " + i.getCategory()+ " : "+ i.getCost() + " $\n");
+				return;
+			}
+		}
+		System.out.println("No match found");
+	}
+}
