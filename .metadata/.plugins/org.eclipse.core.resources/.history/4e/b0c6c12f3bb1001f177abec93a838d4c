@@ -1,0 +1,60 @@
+package hust.soict.dsai.aims.media;
+
+import java.util.ArrayList;
+
+public class CompactDisc extends Disc implements Playable{
+	private String artist; 
+	private ArrayList<Track> tracks= new ArrayList<Track>(); 
+//các hàm khởi tạo
+	public CompactDisc() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	//getter
+	public String getArtist() {
+		return artist;
+	}
+	//check Track exist?
+	public boolean checkTrack(Track track) {
+		for (Track i : tracks) {
+			if (i.equals(track))
+				return true;
+		}
+		return false;
+	}
+	//addTrack
+		public void addTrack(Track track) {
+			if (!checkTrack(track)) {
+				tracks.add(track);
+				System.out.println("add track successfully");
+				return;
+			}
+			System.out.println("track already exist");
+		}
+	//removeTrack
+		public void removeTrack(Track track) {
+			if (checkTrack(track)) {
+				tracks.remove(track);
+				System.out.println("remove track successfully");
+				return;
+			}
+			System.out.println("track not exist");
+		}
+	//getLength
+ public int getLength() {
+	 int sumLength=0;
+	 for(Track i : tracks) {
+		 sumLength+=i.getLength();
+	 }
+	 return sumLength;
+ }
+ //play()
+ public void play() {
+	    System.out.println("CD artist: " + this.getArtist());
+	    for (Track track : tracks) {
+	        track.play();
+	    }
+	}
+
+}

@@ -1,0 +1,9 @@
+package hust.soict.dsai.aims.media;
+
+public class compactDisc extends Disc{
+
+	public compactDisc() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

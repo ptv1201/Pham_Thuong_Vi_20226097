@@ -1,0 +1,116 @@
+package hust.soict.dsai.aims;
+
+import hust.soict.dsai.aims.cart.Cart;
+import hust.soict.dsai.aims.media.Book;
+import hust.soict.dsai.aims.media.CompactDisc;
+import hust.soict.dsai.aims.media.DigitalVideoDisc;
+import hust.soict.dsai.aims.store.Store;
+
+public class Aims{
+
+	public static void main(String[] args) {
+		//Create a new cart
+		Store store=new Store();
+		DigitalVideoDisc dvd1 = new DigitalVideoDisc ("The Lion King", "Animation", "Roger Allers", 87, 19.95f);store.addMedia(dvd1);
+		DigitalVideoDisc dvd2 = new DigitalVideoDisc ("Star Wars", "Science Fiction", "George Lucas", 87, 24.95f);	store.addMedia(dvd2);
+		DigitalVideoDisc dvd3 = new DigitalVideoDisc("Aladin", "Animation", 18.99f);	store.addMedia(dvd3);
+		Book book1=new Book("Banh troi nuoc","ho xuan huong"); store.addMedia(book1);
+		Book book2=new Book("Doraemon","anime",10.00f);store.addMedia(book2);
+		CompactDisc track1= new CompactDisc("Power",100.50f);store.addMedia(track1);
+		
+		
+	
+	
+}
+	public static void checkRemove(DigitalVideoDisc dvd,Cart anOrder) {
+	    int result = anOrder.removeMedia(dvd);
+	    if (result == -1) {
+	        System.out.println("Your cart is empty");
+	    } else if (result == 0) {
+	        System.out.println("No DVD match");
+	    } else if (result == 1) {
+	        System.out.println("Remove DVD " + dvd.getTitle());
+	    }
+
+}
+	public static void showMenu() { 
+
+		System.out.println("AIMS: "); 
+
+		System.out.println("--------------------------------"); 
+
+		System.out.println("1. View store"); 
+
+		System.out.println("2. Update store"); 
+
+		System.out.println("3. See current cart"); 
+
+		System.out.println("0. Exit"); 
+
+		System.out.println("--------------------------------"); 
+
+		System.out.println("Please choose a number: 0-1-2-3"); 
+
+		} 
+	public static void storeMenu() { 
+		System.out.println("Options: "); 
+
+		System.out.println("--------------------------------"); 
+
+		System.out.println("1. See a media’s details"); 
+
+		System.out.println("2. Add a media to cart"); 
+
+		     System.out.println("3. Play a media"); 
+
+		System.out.println("4. See current cart"); 
+
+		System.out.println("0. Back"); 
+
+		System.out.println("--------------------------------"); 
+
+		System.out.println("Please choose a number: 0-1-2-3-4"); 
+
+		} 
+	public static void mediaDetailsMenu() { 
+
+		System.out.println("Options: "); 
+
+		System.out.println("--------------------------------"); 
+
+		System.out.println("1. Add to cart"); 
+
+		System.out.println("2. Play"); 
+
+		System.out.println("0. Back"); 
+
+		System.out.println("--------------------------------"); 
+
+		System.out.println("Please choose a number: 0-1-2"); 
+
+		} 
+	public static void cartMenu() { 
+
+		System.out.println("Options: "); 
+
+		System.out.println("--------------------------------"); 
+
+		System.out.println("1. Filter medias in cart"); 
+
+		System.out.println("2. Sort medias in cart"); 
+
+		System.out.println("3. Remove media from cart"); 
+
+		System.out.println("4. Play a media"); 
+
+		System.out.println("5. Place order"); 
+
+		System.out.println("0. Back"); 
+
+		System.out.println("--------------------------------"); 
+
+		System.out.println("Please choose a number: 0-1-2-3-4-5"); 
+
+		} 
+	}
+
