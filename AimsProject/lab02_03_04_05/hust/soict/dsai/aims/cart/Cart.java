@@ -1,12 +1,12 @@
 package hust.soict.dsai.aims.cart;
 
-import java.util.ArrayList;
-
 import hust.soict.dsai.aims.media.Media;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 
 public class Cart {
 
-	public ArrayList<Media> itemsOrdered = new ArrayList<>();
+	public ObservableList<Media> itemsOrdered = FXCollections.observableArrayList();
 	//addMedia
 	public boolean equals(Media media) {
 		for (Media i : itemsOrdered) {
@@ -100,4 +100,8 @@ public class Cart {
 			removeMedia(i);
 		}
 	}
+	public ObservableList<Media> getItemsOrdered() {
+		return itemsOrdered;
+	}
+	
 }

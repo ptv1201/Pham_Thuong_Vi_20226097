@@ -33,5 +33,4 @@ public class PainterController {
     	Circle newCircle = new Circle(event.getX(),event.getY(), 4, color);
     			drawingAreaPane.getChildren().add(newCircle);
     }
-
 }
